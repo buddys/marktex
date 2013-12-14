@@ -1,6 +1,6 @@
 # marked
 
-A rich-feature markdown parser, especially for geeks. Live demo available at http://buddys.github.io/marktex/ 
+A rich-feature markdown parser, especially for geeks. [Live demo](http://buddys.github.io/marktex/) is available.
 
 > GFM supported, code hilighting, math supporting, task list, smarter list, para alignment.
 
@@ -41,6 +41,8 @@ Type: `Object`
 Option object for marktex.
 
 ### callback
+
+Type: `Function`
 
 Callback function with error-string as first arg, parsed-content as second arg.
 
