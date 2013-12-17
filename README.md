@@ -1,4 +1,4 @@
-# marked
+# marktex
 
 A rich-feature markdown parser, especially for geeks. [Live demo](http://buddys.github.io/marktex/) is available.
 
@@ -62,6 +62,13 @@ Default: `true`
 
 Enable GFM tables. Requires the `gfm` option to be true.
 
+### todo
+
+Type: `Boolean`
+Default: `true`
+
+Enable GFM todo. Requires the `gfm` option to be true.
+
 ### breaks
 
 Type: `Boolean`
@@ -76,6 +83,27 @@ Default: `true`
 
 Enable [MarkTex](http://buddys.github.io/marktex/), features include task-list, math interface, para-alignment, smarter list ,etc.
 
+### math
+
+Type: `Boolean`
+Default: `true`
+
+Enable math rendering. Requires the `marktex` option to be true.
+
+### smartlist
+
+Type: `Boolean`
+Default: `true`
+
+Smarter list rendering. Different symbol in unsorted list, and consecutive `\n` in all list, will split lists. Requires the `marktex` option to be true.
+
+### align
+
+Type: `Boolean`
+Default: `true`
+
+Enable paragraph alignment. Requires the `marktex` option to be true.
+
 ### pedantic
 
 Type: `Boolean`
@@ -89,13 +117,6 @@ Type: `Boolean`
 Default: `false`
 
 Ignore any HTML that has been input.
-
-### smartLists
-
-Type: `Boolean`
-Default: `true`
-
-Unsorted list will be splited when leading symbol changes.
 
 ### smartypants
 
@@ -139,6 +160,13 @@ Default: `new Renderer()`
 A renderer instance for rendering ast to html. Learn more on the Renderer
 section.
 
+### silent
+
+Type: `Boolean`
+Default: `false`
+
+Do not report when exceptions occur.
+
 ## Parser API
 
 ### Renderer
@@ -146,12 +174,12 @@ section.
 Renderer renders tokens to html.
 
 ```javascript
-var r = new marked.Renderer()
+var r = new marktex.Renderer()
 r.blockcode = function(code, lang) {
   return highlight(lang, code).value;
 }
 
-console.log(marked(text, {renderer: r}))
+console.log(marktex(text, {renderer: r}))
 ```
 
 #### Block Level Renderer
@@ -206,7 +234,7 @@ console.log(marked(text, {renderer: r}))
 Lexer produces tokens from markdown text input.
 
 ``` js
-var lexer = new marked.Lexer(options);
+var lexer = new marktex.Lexer(options);
 var tokens = lexer.lex(text);
 console.log(tokens);
 console.log(lexer.rules);
@@ -217,7 +245,7 @@ console.log(lexer.rules);
 Parser reads markdown text, outputs html. Renders and lexers can be customed within a parser.
 
 ``` js
-var renderer = new marked.Renderer();
+var renderer = new marktex.Renderer();
 
 renderer.header = function(text, level) {
   return '<div class="h-' + level + '">' + text + '</div>'
@@ -225,7 +253,7 @@ renderer.header = function(text, level) {
 
 var parse = function(src, options) {
   options = options || {};
-  return marked.parser(marked.lexer(src, options), options, renderer);
+  return marktex.parser(marktex.lexer(src, options), options, renderer);
 }
 
 console.log(parse('# h1'))
