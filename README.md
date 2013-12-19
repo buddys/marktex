@@ -1,6 +1,6 @@
 # marktex
 
-A rich-feature markdown parser, especially for geeks. [Live demo](http://buddys.github.io/marktex/) is available.
+A rich-feature, smarter markdown parser in javascript, especially for geeks. [Live demo](http://buddys.github.io/marktex/) is available.
 
 > GFM supported, code hilighting, math supporting, task list, smarter list, para alignment.
 
@@ -69,6 +69,18 @@ Default: `true`
 
 Enable GFM todo. Requires the `gfm` option to be true.
 
+### highlight
+
+Type: `Function` Default: `null` Return: `string` 
+
+Highlight interface, used for highlight code blocks. Takes language specification and code string, returns html. Requires the `gfm` option to be true.
+
+```js
+options = {
+    highlight: function(codeString, language){ return highlight(lang, code).value; }
+}
+```
+
 ### breaks
 
 Type: `Boolean`
@@ -85,10 +97,19 @@ Enable [MarkTex](http://buddys.github.io/marktex/), features include task-list, 
 
 ### math
 
-Type: `Boolean`
-Default: `true`
+Type: `Function` Default: `null` Return: `string` 
 
-Enable math rendering. Requires the `marktex` option to be true.
+Matg interface, used for rendering math code. Takes math code, isInline and language, returns html. Requires the `marktex` option to be true.
+
+```js
+//sample
+options = {
+    math: function(mathString, isInline, language){
+            return isInline ? '<span class="mathjax">\\('+mathString+'\\)</span>'
+            :'<div class="mathjax">\\['+mathString+'\\]</div>';
+            }
+}
+```
 
 ### smartlist
 
@@ -96,6 +117,14 @@ Type: `Boolean`
 Default: `true`
 
 Smarter list rendering. Different symbol in unsorted list, and consecutive `\n` in all list, will split lists. Requires the `marktex` option to be true.
+
+### smartquote
+
+Type: `Boolean`
+Default: `true`
+
+Smarter blockquote rendering. Consecutive `\n` will split blockquote. Requires the `marktex` option to be true.
+
 
 ### align
 
@@ -125,33 +154,6 @@ Default: `false`
 
 Use "smart" typograhic punctuation for things like quotes and dashes.
 
-### highlight
-
-Type: `Function`
-Return: `string` 
-
-Highlight interface, used for highlight code blocks. Takes language specification and code string, returns html. For example:
-
-```js
-function(codeString, language){
-    return highlight(lang, code).value;
-}
-```
-
-### math
-
-Type: `Function`
-Return: `string` 
-
-Matg interface, used for rendering math code. Takes math code, isInline and language, returns html. For example:
-
-```js
-math: function(mathString, isInline, language){
-    return isInline ? '<span class="mathjax">\\('+mathString+'\\)</span>'
-        :'<div class="mathjax">\\['+mathString+'\\]</div>';
-}
-```
-
 ### renderer
 
 Type: `Renderer`
@@ -160,12 +162,6 @@ Default: `new Renderer()`
 A renderer instance for rendering ast to html. Learn more on the Renderer
 section.
 
-### silent
-
-Type: `Boolean`
-Default: `false`
-
-Do not report when exceptions occur.
 
 ## Parser API
 

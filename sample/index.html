@@ -6,7 +6,7 @@
     <body>
         <div id='dst'></div>
         <textarea id='src' style='display:none;'>
-# MarkTex Syntax Guide
+# MarkTex Demo
 
 Marktex combined markdown and GFM, with unpleasant features removed, and some new added. The following is demos with markdown code.>1
 
@@ -185,22 +185,9 @@ second line
         <script>
         $(function(){
             var mdOptions = {
-                marktex: true,
-                gfm: true,
-                tables: true,
-                breaks: true,
-                
-                pedantic: false,
-                sanitize: false,
-                smartLists: true,
-                smartypants: false,
-                    
-                //code highlight
                 highlight: function(code, lang){
                     return hljs.highlight(lang, code).value;
                 },
-                
-                //math renderer
                 math: function(math,inline,lang){
                     return inline ? '<span class="mathjax">\\('+math+'\\)</span>'
                         :'<div class="mathjax">\\['+math+'\\]</div>';
@@ -209,9 +196,7 @@ second line
             
             //do rendering
             marktex($('#src').text(), mdOptions, function(err,content){
-                if (err) {
-                    alert('parsing error: \n'+err);
-                }
+                if (err) return;
                 $('#dst').html(content);
                 $('.mathjax').each(function(i,v){
                     MathJax.Hub.Queue(["Typeset",MathJax.Hub,v]);            

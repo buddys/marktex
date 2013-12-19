@@ -1,2 +1,4 @@
 /*.ppk
 /*.ppk
+*.log
+node_modules/
