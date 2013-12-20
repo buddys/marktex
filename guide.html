@@ -1,0 +1,26 @@
+---
+layout: default
+title: Feature Guide - MarkTex
+---
+
+<script type="text/plain" id="raw">{% include guide.md %}</script>
+	  
+<div class="page-header">
+  <h1>Feature Guide <small> smarter markdown</small></h1>
+</div>
+
+<div id="content" class="hmd"></div>
+
+<script>
+	$(function () {		
+		$('#nav_guide').addClass('active');
+		
+		marktex($('#raw').html(), function(err,content){
+			if (err) { return; }
+			$('#content').html(content);	
+			$('.mathjax').each(function(i,v){
+				MathJax.Hub.Queue(["Typeset",MathJax.Hub,v]);            
+			});
+		});
+	});
+</script>

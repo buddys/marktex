@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Feature Guide - MarkTex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap -->
+    <link href="//harttle.github.io/assets/bootstrap-3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        
+    <!-- Custom styles  -->
+    <link href="//harttle.github.io/assets/css/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/markdown.css">
+    <link rel="stylesheet" href="https://rawgithub.com/buddys/marktex/master/style/syntax.css">
+      
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.6.2/html5shiv.js"></script>
+      <script src="//v3.bootcss.com/docs-assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//harttle.github.io/assets/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Marktex rendering -->
+    <script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({ skipStartupTypeset: true });
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="http://highlightjs.org/static/highlight.pack.js"></script>
+    <script src="https://rawgithub.com/buddys/marktex/master/lib/marktex.js"></script>
+    <script>
+      marktex.options({
+          highlight: function(code, lang){
+              return hljs.highlight(lang, code).value;
+          },
+          math: function(math,inline,lang){
+              return inline ? '<span class="mathjax">\\('+math+'\\)</span>'
+                  :'<div class="mathjax">\\['+math+'\\]</div>';
+          }
+      });
+    </script>
+    
+  </head>
+  <body>
+    
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html">MarkTex</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li id="nav_home"><a href="./index.html">Home</a></li>
+              <li id="nav_guide"><a href="./guide.html">Get Started</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">            
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">View on Github <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="//github.com/buddys/MarkTexEdt" target="_blank">MarkTexEdt</a></li>
+                  <li><a href="//github.com/buddys/marktex" target="_blank">marktex</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- Begin page content -->
+      <div class="container">
+        <script type="text/plain" id="raw">Marktex combined markdown and GFM, with unpleasant features removed, and some new added. The following is demos with markdown code.
+
+## MarkTex Features
+
+We fixed markdown features and added ours.
+
+### alignment
+ 
+> There is no alignment in markdown, added in marktex.
+            
+```
+center aligned>
+
+right aligned>>
+useful in signatures.
+
+para can be indented by 1 tab. >1
+```
+       
+becomes
+
+center aligned>
+
+right aligned>>
+useful in signatures.
+
+para can be indented by 1 tab. >1
+
+
+### list
+
+> List rendering is another annoying feature in markdown, we fixed it someway.
+
+```
+1. item one
+  additional `\n` is not required
+1. arbitrary number works
+  > blockquote bug with list is also fixed
+
+1. successive `\n` split lists
+```
+
+becomes
+
+1. item one
+  additional `\n` is not required
+1. arbitrary number works
+  > blockquote bug with list is also fixed
+
+2. successive `\n` split lists
+
+
+### math
+
+> Sometimes, we need some math.
+
+```
+This is inline math: $mr\omega^2 = F$, and the following is blocked math.
+
+$$$
+f(a) = \frac{1}{2\pi i}\oint_\gamma \frac{f(z)  }{z-a}dz
+$$$
+
+$$$
+J_\alpha(x) = \sum\limits_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m + \alpha + 1)}{\left({\frac{x}{2}}\right)}^{2 m + \alpha}
+$$$
+```
+       
+becomes
+
+This is inline math: $mr\omega^2 = F$, and the following is blocked math.
+
+$$$
+f(a) = \frac{1}{2\pi i}\oint_\gamma \frac{f(z)  }{z-a}dz
+$$$
+
+$$$
+J_\alpha(x) = \sum\limits_{m=0}^\infty \frac{(-1)^m}{m! \, \Gamma(m + \alpha + 1)}{\left({\frac{x}{2}}\right)}^{2 m + \alpha}
+$$$
+
+
+
+## GFM Features
+
+> Most GFM features are implemented/integrated in MarkTex, especially the wonderful ones.
+
+
+
+### code highlight
+
+> we enabled code hilight, as pretty code is for geeks' favorite.
+
+    this is `inline code`.
+    
+    ```javascript
+    // hello world
+    var a='hello world';
+    alert(a);
+    ```
+    
+        indented by 4 spaces also makes code
+
+       
+becomes
+
+this is `inline code`.
+
+```javascript
+// hello world
+var a='hello world';
+alert(a);
+```
+
+    indented by 4 spaces also makes code
+
+
+### table
+
+    |h1|h2|h3|
+    |:---|:---:|---:|
+    |this is the GFM table|following line is multi-aligned|isn't it cute?|
+    |left|center|right|
+       
+becomes
+
+|h1|h2|h3|
+|:---|:---:|---:|
+|this is the GFM table|following line is multi-aligned|isn't it cute?|
+|left|center|right|
+
+### Task list
+
+> A new feature in GFM, which hasn't be inplemented in most converters.
+
+    - [ ] a task list item
+    - [x] a complex task
+      * part1
+      * part2
+    - [ ] incomplete
+    - [x] completed
+    
+becomes
+
+- [ ] a task list item
+- [x] a complex task
+  * part1
+  * part2
+- [ ] incomplete
+- [x] completed
+
+### line break
+
+> GFM line break is enabled by default.
+    
+    first line
+    second line
+       
+becomes
+
+first line
+second line
+
+---
+
+> For a complete syntax, please refere to: [GFM](https://help.github.com/articles/github-flavored-markdown) , or [Markdown](http://daringfireball.net/projects/markdown/syntax).
+</script>
+	  
+<div class="page-header">
+  <h1>Feature Guide <small> smarter markdown</small></h1>
+</div>
+
+<div id="content" class="hmd"></div>
+
+<script>
+	$(function () {		
+		$('#nav_guide').addClass('active');
+		
+		marktex($('#raw').html(), function(err,content){
+			if (err) { return; }
+			$('#content').html(content);	
+			$('.mathjax').each(function(i,v){
+				MathJax.Hub.Queue(["Typeset",MathJax.Hub,v]);            
+			});
+		});
+	});
+</script>
+      </div>
+    </div>
+    
+    <div id="footer">
+      <div class="container">    
+        <p class="text-muted credit">
+          Copyright © 2013 
+          <a href="//harttle.github.com">Harttle</a>. Powered by <a href="//jekyllrb.com/">Jekyll</a> and hosted by <a href="//github.com/harttle/" target="_blank">GitHub</a>.
+        </p>
+      </div>
+    </div> 
+    
+  </body>
+</html>
