@@ -279,7 +279,7 @@ Table style, src: http://markdown-here.com/
   position: absolute;
   width: 10px;
   height: 10px;
-  top: 5;
+  top: 5px;
   left: 0;
   background: #fafafa;
   border:1px solid #ddd;

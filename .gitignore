@@ -1,7 +1,5 @@
 /*.ppk
 /*.ppk
-<<<<<<< HEAD
 *.log
 node_modules/
-=======
->>>>>>> 4c5dce21c75d957d3ceefc1799cecfe09879b785
+_site/
