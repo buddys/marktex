@@ -4,6 +4,13 @@ A rich-feature, smarter markdown parser in javascript, especially for geeks. [Li
 
 > GFM supported, code hilighting, math supporting, task list, smarter list, para alignment.
 
+[![NPM version](https://badge.fury.io/js/marktex.png)](http://badge.fury.io/js/marktex)
+
+## Install
+
+``` bash
+npm install marktex
+```
 
 ## Usage
 
