@@ -27,7 +27,7 @@ Options and callback:
 var options = {
   gfm: true,
   marktex: true
-});
+};
 
 marktex('**markdown** is wonderful', options, function (err, content) {
   if (err) throw err;
@@ -35,7 +35,7 @@ marktex('**markdown** is wonderful', options, function (err, content) {
 });
 ```
 
-## marktex(mdStr, [options], [callback])
+## marktex(markdownString, [options], [callback])
 
 ### markdownString
 
