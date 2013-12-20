@@ -171,7 +171,7 @@ Renderer renders tokens to html.
 
 ```javascript
 var r = new marktex.Renderer()
-r.blockcode = function(code, lang) {
+r.code = function(code, lang) {
   return highlight(lang, code).value;
 }
 
@@ -230,7 +230,8 @@ console.log(marktex(text, {renderer: r}))
 Lexer produces tokens from markdown text input.
 
 ``` js
-var lexer = new marktex.Lexer(options);
+var options={};
+var lexer = new marktex.BlockLexer(options);
 var tokens = lexer.lex(text);
 console.log(tokens);
 console.log(lexer.rules);
@@ -243,16 +244,16 @@ Parser reads markdown text, outputs html. Renders and lexers can be customed wit
 ``` js
 var renderer = new marktex.Renderer();
 
-renderer.header = function(text, level) {
+renderer.heading = function(text, level) {
   return '<div class="h-' + level + '">' + text + '</div>'
 }
 
 var parse = function(src, options) {
   options = options || {};
-  return marktex.parser(marktex.lexer(src, options), options, renderer);
+  return marktex.parse(marktex.blockLex(src, options), options);
 }
 
-console.log(parse('# h1'))
+console.log(parse('# h1', {renderer: renderer}))
 ```
 
 ## Thanks

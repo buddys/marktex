@@ -1,5 +1,5 @@
-*** default/blockquote.html	2013-12-20 00:11:54.502727868 +0800
---- gfm_off/blockquote.html	2013-12-20 00:11:55.092739266 +0800
+*** default/blockquote.html	2013-12-20 16:22:38.563665776 +0800
+--- gfm_off/blockquote.html	2013-12-20 16:22:39.123638524 +0800
 ***************
 *** 1,7 ****
   <blockquote>
@@ -21,8 +21,8 @@
   <p>normal text lies here</p>
 
 
-*** default/code.html	2013-12-20 00:11:54.552728834 +0800
---- gfm_off/code.html	2013-12-20 00:11:55.146073629 +0800
+*** default/code.html	2013-12-20 16:22:38.606996996 +0800
+--- gfm_off/code.html	2013-12-20 16:22:39.163636595 +0800
 ***************
 *** 1,4 ****
   <p>codespan <code>int</code> is enabled in markdown.</p>
@@ -37,8 +37,8 @@
 ! <p>both can be highlighted by custom option: highlight(code, lang)</p>
 
 
-*** default/font.html	2013-12-20 00:11:54.636063776 +0800
---- gfm_off/font.html	2013-12-20 00:11:55.222741777 +0800
+*** default/font.html	2013-12-20 16:22:38.690326264 +0800
+--- gfm_off/font.html	2013-12-20 16:22:39.260298598 +0800
 ***************
 *** 1,2 ****
 ! <p><strong>bold</strong>, <em>emphasis</em>, and <del>strikethrough</del>.</p>
@@ -48,8 +48,8 @@
   <p><em>this</em> symbol <strong>also</strong> works, while _t_h_i_s is disabled in gfm.</p>
 
 
-*** default/link.html	2013-12-20 00:11:54.799400266 +0800
---- gfm_off/link.html	2013-12-20 00:11:55.379411469 +0800
+*** default/link.html	2013-12-20 16:22:38.853651628 +0800
+--- gfm_off/link.html	2013-12-20 16:22:39.416957709 +0800
 ***************
 *** 1,4 ****
 ! <p>auto link (gfm): <a href="http://www.baidu.com">http://www.baidu.com</a></p>
@@ -63,8 +63,8 @@
   <p><a href="http://foo.bar.com" title="optional title">reflink</a></p>
 
 
-*** default/newline.html	2013-12-20 00:11:54.929402777 +0800
---- gfm_off/newline.html	2013-12-20 00:11:55.496080390 +0800
+*** default/newline.html	2013-12-20 16:22:38.970312603 +0800
+--- gfm_off/newline.html	2013-12-20 16:22:39.526952403 +0800
 ***************
 *** 1,2 ****
 ! <p>line1<br>line2</p>
@@ -75,8 +75,8 @@
   <p>line3</p>
 
 
-*** default/paragraph.html	2013-12-20 00:11:54.972736947 +0800
---- gfm_off/paragraph.html	2013-12-20 00:11:55.539414561 +0800
+*** default/paragraph.html	2013-12-20 16:22:39.006977484 +0800
+--- gfm_off/paragraph.html	2013-12-20 16:22:39.566950474 +0800
 ***************
 *** 1,3 ****
   <p>regular paragraph</p>
@@ -90,8 +90,8 @@
 ! in marktex</p>
 
 
-*** default/table.html	2013-12-20 00:11:55.012737720 +0800
---- gfm_off/table.html	2013-12-20 00:11:55.579415333 +0800
+*** default/table.html	2013-12-20 16:22:39.046975555 +0800
+--- gfm_off/table.html	2013-12-20 16:22:39.600282199 +0800
 ***************
 *** 1,42 ****
 ! <table>
@@ -147,8 +147,8 @@
 ! isn&#39;t|it|convenient?</p>
 
 
-*** default/todo.html	2013-12-20 00:11:55.052738493 +0800
---- gfm_off/todo.html	2013-12-20 00:11:55.616082709 +0800
+*** default/todo.html	2013-12-20 16:22:39.086973626 +0800
+--- gfm_off/todo.html	2013-12-20 16:22:39.636947097 +0800
 ***************
 *** 1,10 ****
 ! <div class="todo">

@@ -1,5 +1,5 @@
-*** default/paragraph.html	2013-12-20 00:11:54.972736947 +0800
---- align_off/paragraph.html	2013-12-20 00:11:57.776124434 +0800
+*** default/paragraph.html	2013-12-20 16:22:39.006977484 +0800
+--- align_off/paragraph.html	2013-12-20 16:22:41.730180812 +0800
 ***************
 *** 1,3 ****
   <p>regular paragraph</p>
