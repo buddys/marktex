@@ -1,16 +1,12 @@
-Marktex is a rich-feature, smarter markdown parser. Features with demos are listed below.
+Marktex is a rich-feature, smarter markdown parser. Extended features with demos are listed below.
 
 > GFM supported, code hilighting, math supporting, task list, smarter list, para alignment. 
 
 
 ## MarkTex Features
 
-We fixed markdown features and added ours.
-
 ### alignment
  
-> There is no alignment in markdown. We added it in marktex.
-            
 ```
 center aligned>
 
@@ -32,7 +28,7 @@ para can be indented by 1 tab. >1
 
 ### list
 
-> List rendering is another annoying feature in markdown, we fixed it someway.
+> We enabled smarter list rendering than origin markdown.
 
 ```
 1. item one
@@ -52,8 +48,6 @@ becomes
 
 
 ### math
-
-> Sometimes, we need some math.
 
 ```
 This is inline math: $mr\omega^2 = F$, and the following is blocked math.
@@ -85,11 +79,7 @@ $$$
 
 > Most GFM features are implemented/integrated in MarkTex, especially the wonderful ones.
 
-
-
 ### code highlight
-
-> we enabled code hilight, as pretty code is for geeks' favorite.
 
     this is `inline code`.
     
@@ -125,8 +115,6 @@ becomes
 
 ### Task list
 
-> A new feature in GFM, which hasn't be inplemented in most converters.
-
     - [ ] a task list item
     - [x] a complex task
     - [ ] incomplete
@@ -141,8 +129,6 @@ becomes
 
 ### line break
 
-> GFM line break is enabled by default.
-    
     first line
     second line
        
