@@ -1,5 +1,5 @@
-*** default/blockquote.html	2013-12-20 16:22:38.563665776 +0800
---- smartquote_off/blockquote.html	2013-12-20 16:22:40.760226665 +0800
+*** default/blockquote.html	2013-12-21 20:10:08.840816004 +0800
+--- smartquote_off/blockquote.html	2013-12-21 20:10:11.037033530 +0800
 ***************
 *** 1,7 ****
   <blockquote>

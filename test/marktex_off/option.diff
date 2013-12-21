@@ -1,5 +1,5 @@
-*** default/blockquote.html	2013-12-20 16:22:38.563665776 +0800
---- marktex_off/blockquote.html	2013-12-20 16:22:39.680278340 +0800
+*** default/blockquote.html	2013-12-21 20:10:08.840816004 +0800
+--- marktex_off/blockquote.html	2013-12-21 20:10:09.917262316 +0800
 ***************
 *** 1,7 ****
   <blockquote>
@@ -12,8 +12,8 @@
 --- 1,5 ----
 
 
-*** default/list.html	2013-12-20 16:22:38.890316506 +0800
---- marktex_off/list.html	2013-12-20 16:22:39.983597043 +0800
+*** default/list.html	2013-12-21 20:10:09.154085169 +0800
+--- marktex_off/list.html	2013-12-21 20:10:10.237196924 +0800
 ***************
 *** 9,18 ****
   <p>normal text</p>
@@ -39,8 +39,8 @@
   <ul>
 
 
-*** default/math.html	2013-12-20 16:22:38.930314555 +0800
---- marktex_off/math.html	2013-12-20 16:22:40.023595126 +0800
+*** default/math.html	2013-12-21 20:10:09.194076985 +0800
+--- marktex_off/math.html	2013-12-21 20:10:10.280521406 +0800
 ***************
 *** 1,3 ****
 ! <p>math <code>mr\omega^2 = F</code>, and math fences:</p>
@@ -52,8 +52,8 @@
 ! <p>can be rendered by custom option: math(code, isInline, lang)</p>
 
 
-*** default/paragraph.html	2013-12-20 16:22:39.006977484 +0800
---- marktex_off/paragraph.html	2013-12-20 16:22:40.106924486 +0800
+*** default/paragraph.html	2013-12-21 20:10:09.270727965 +0800
+--- marktex_off/paragraph.html	2013-12-21 20:10:10.377168328 +0800
 ***************
 *** 1,3 ****
   <p>regular paragraph</p>
