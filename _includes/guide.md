@@ -1,13 +1,12 @@
-Marktex combined markdown and GFM, with unpleasant features removed, and some new added. The following is demos with markdown code.
+Marktex is a rich-feature, smarter markdown parser. Extended features with demos are listed below.
+
+> GFM supported, code hilighting, math supporting, task list, smarter list, para alignment. 
+
 
 ## MarkTex Features
 
-We fixed markdown features and added ours.
-
 ### alignment
  
-> There is no alignment in markdown, added in marktex.
-            
 ```
 center aligned>
 
@@ -29,13 +28,12 @@ para can be indented by 1 tab. >1
 
 ### list
 
-> List rendering is another annoying feature in markdown, we fixed it someway.
+> We enabled smarter list rendering than origin markdown.
 
 ```
 1. item one
   additional `\n` is not required
-1. arbitrary number works
-  > blockquote bug with list is also fixed
+1. leading number can be arbitrary
 
 1. successive `\n` split lists
 ```
@@ -44,15 +42,12 @@ becomes
 
 1. item one
   additional `\n` is not required
-1. arbitrary number works
-  > blockquote bug with list is also fixed
+1. leading number can be arbitrary
 
-2. successive `\n` split lists
+1. successive `\n` split lists
 
 
 ### math
-
-> Sometimes, we need some math.
 
 ```
 This is inline math: $mr\omega^2 = F$, and the following is blocked math.
@@ -84,11 +79,7 @@ $$$
 
 > Most GFM features are implemented/integrated in MarkTex, especially the wonderful ones.
 
-
-
 ### code highlight
-
-> we enabled code hilight, as pretty code is for geeks' favorite.
 
     this is `inline code`.
     
@@ -98,9 +89,6 @@ $$$
     alert(a);
     ```
     
-        indented by 4 spaces also makes code
-
-       
 becomes
 
 this is `inline code`.
@@ -110,9 +98,6 @@ this is `inline code`.
 var a='hello world';
 alert(a);
 ```
-
-    indented by 4 spaces also makes code
-
 
 ### table
 
@@ -130,12 +115,8 @@ becomes
 
 ### Task list
 
-> A new feature in GFM, which hasn't be inplemented in most converters.
-
     - [ ] a task list item
     - [x] a complex task
-      * part1
-      * part2
     - [ ] incomplete
     - [x] completed
     
@@ -143,15 +124,11 @@ becomes
 
 - [ ] a task list item
 - [x] a complex task
-  * part1
-  * part2
 - [ ] incomplete
 - [x] completed
 
 ### line break
 
-> GFM line break is enabled by default.
-    
     first line
     second line
        
