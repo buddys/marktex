@@ -9,7 +9,7 @@ We fixed markdown features and added ours.
 
 ### alignment
  
-> There is no alignment in markdown, added in marktex.
+> There is no alignment in markdown. We added it in marktex.
             
 ```
 center aligned>
@@ -37,8 +37,7 @@ para can be indented by 1 tab. >1
 ```
 1. item one
   additional `\n` is not required
-1. arbitrary number works
-  > blockquote bug with list is also fixed
+1. leading number can be arbitrary
 
 1. successive `\n` split lists
 ```
@@ -47,10 +46,9 @@ becomes
 
 1. item one
   additional `\n` is not required
-1. arbitrary number works
-  > blockquote bug with list is also fixed
+1. leading number can be arbitrary
 
-2. successive `\n` split lists
+1. successive `\n` split lists
 
 
 ### math
@@ -101,9 +99,6 @@ $$$
     alert(a);
     ```
     
-        indented by 4 spaces also makes code
-
-       
 becomes
 
 this is `inline code`.
@@ -113,9 +108,6 @@ this is `inline code`.
 var a='hello world';
 alert(a);
 ```
-
-    indented by 4 spaces also makes code
-
 
 ### table
 
@@ -137,8 +129,6 @@ becomes
 
     - [ ] a task list item
     - [x] a complex task
-      * part1
-      * part2
     - [ ] incomplete
     - [x] completed
     
@@ -146,8 +136,6 @@ becomes
 
 - [ ] a task list item
 - [x] a complex task
-  * part1
-  * part2
 - [ ] incomplete
 - [x] completed
 
