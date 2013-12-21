@@ -51,7 +51,7 @@ Option object for marktex.
 
 Type: `Function`
 
-Callback function with error-string as first arg, parsed-content as second arg.
+Callback function with error-string as the first arg, parsed-content as the second arg.
 
 ## Options
 
@@ -106,7 +106,7 @@ Enable [MarkTex](http://buddys.github.io/marktex/), features include task-list, 
 
 Type: `Function` Default: `null` Return: `string` 
 
-Matg interface, used for rendering math code. Takes math code, isInline and language, returns html. Requires the `marktex` option to be true.
+Math interface, used for rendering math code. Takes math code, isInline and language, returns html. Requires the `marktex` option to be true.
 
 ```js
 //sample
