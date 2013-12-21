@@ -1,4 +1,7 @@
-Marktex combined markdown and GFM, with unpleasant features removed, and some new added. The following is demos with markdown code.
+Marktex is a rich-feature, smarter markdown parser. Features with demos are listed below.
+
+> GFM supported, code hilighting, math supporting, task list, smarter list, para alignment. 
+
 
 ## MarkTex Features
 
