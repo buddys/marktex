@@ -42,7 +42,7 @@ opt = require('optimist')
     boolean: true
   })
   .options('smartlist',{
-    default: true,
+    default: false,
     describe: 'Smarter list rendering. Different symbol in unsorted list, and consecutive `\n` in all list, will split lists. Requires the `marktex` option to be true.',
     boolean: true
   })

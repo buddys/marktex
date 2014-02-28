@@ -121,7 +121,7 @@ options = {
 ### smartlist
 
 Type: `Boolean`
-Default: `true`
+Default: `false`
 
 Smarter list rendering. Different symbol in unsorted list, and consecutive `\n` in all list, will split lists. Requires the `marktex` option to be true.
 
