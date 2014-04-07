@@ -1,7 +1,7 @@
 {
     "name": "marktex",
-    "version": "0.2.2",
-    "description": "A rich-feature, smarter markdown parser in javascript, especially for geeks.",
+    "version": "0.2.9",
+    "description": "A full GFM implementation in javascript. Additional smart features supported and enabled by default.",
     "preferGlobal": "true",
     "main": "lib/marktex.js",
     "bin": { "marktex": "bin/marktex.js" },

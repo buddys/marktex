@@ -1,6 +1,6 @@
 # marktex
 
-A rich-feature, smarter markdown parser in javascript, especially for geeks. [Live demo](http://buddys.github.io/marktex/) is available.
+A full GFM implementation in javascript. Additional smart features supported and enabled by default. [Live demo](http://buddys.github.io/marktex/) is available.
 
 > GFM supported, code hilighting, math supporting, task list, smarter list, para alignment.
 
