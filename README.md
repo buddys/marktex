@@ -1,3 +1,5 @@
+**Maintainer wanted**: This project is no longer maintained, feel free to take it over if you're interested :)
+
 # marktex
 
 A full GFM implementation in javascript. Additional smart features supported and enabled by default. [Live demo](http://buddys.github.io/marktex/) is available.
